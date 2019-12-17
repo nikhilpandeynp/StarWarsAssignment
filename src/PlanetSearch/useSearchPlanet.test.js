@@ -4,7 +4,6 @@ import { renderHook, act } from '@testing-library/react-hooks'
 
 jest.mock('axios');
 
-
 describe('the useInput hook', () => {
     beforeAll(() => {
         const resp = { data: { results: ['xyz'] } };
