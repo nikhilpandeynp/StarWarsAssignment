@@ -41,20 +41,14 @@ export default name => {
         );
     
         const search = useAsync(
-            async () => {
-                if (inputText.length === 0) {
-                    return [];
-                } else {
-                    return debouncedSearchStarwarsHero(inputText);
-                }
-            },
+            async () => inputText.length === 0 ? [] : debouncedSearchStarwarsHero(inputText),
             [inputText]
         );
     
         return {
-        inputText,
-        setInputText,
-        search,
+            inputText,
+            setInputText,
+            search,
         };
     };
 
