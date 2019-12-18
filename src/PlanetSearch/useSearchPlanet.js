@@ -41,9 +41,7 @@ export default name => {
         );
     
         const search = useAsync(
-            async () => {
-                return inputText.length === 0 ? [] : debouncedSearchStarwarsHero(inputText)
-            },
+            async () => inputText.length === 0 ? [] : debouncedSearchStarwarsHero(inputText),
             [inputText]
         );
     
